@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Western Style</title>
+    <link rel="stylesheet" href="assets/css/menu.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Restaurant Menu</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" id="customerName" name="customerName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="customerAge">Customer Age:</label>
+                <input type="number" id="customerAge" name="customerAge" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="customerFood">I want to eat:</label>
+                <input type="text" id="customerFood" name="customerFood" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+        
+        <div id="menuInfo" class="menu-info">
+            <h3>Menu Information</h3>
+            <div id="menuDetails"></div>
+        </div>
+    </div>
+    <script src="assets/js/menu.js"></script>
+</body>
+</html>

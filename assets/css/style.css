@@ -1,40 +1,87 @@
 body {
-    font-family: sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
+    width: 360px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
 }
 
 h2 {
     text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
 }
 
 label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 input[type="text"],
 input[type="password"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #e1e1e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
 }
 
 button {
+    width: 100%;
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 14px 20px;
     border: none;
-    border-radius: 3px;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+        margin: 20px;
+    }
 }

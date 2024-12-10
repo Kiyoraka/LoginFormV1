@@ -9,6 +9,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     { 
         // Successful login
         echo "Login successful!";
+        header("Location: menu.html");
     } else {
         // Invalid credentials
         echo "Invalid username or password.";
