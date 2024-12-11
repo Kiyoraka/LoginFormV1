@@ -1,15 +1,15 @@
 <?php
-header('Content-Type: application/json'); // Set content type to JSON
+header('Content-Type: application/json'); 
 include 'connection.php';
 
 try {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = mysqli_real_escape_string($conn, $_POST['customerName']);
-        $age = mysqli_real_escape_string($conn, $_POST['customerAge']);
-        $food = mysqli_real_escape_string($conn, $_POST['customerFood']);
+        $name = mysqli_real_escape_string($conn, $_POST['customerName']); // CHANGE BASED ON YOUR WEBSITE
+        $age = mysqli_real_escape_string($conn, $_POST['customerAge']);   // CHANGE BASED ON YOUR WEBSITE
+        $food = mysqli_real_escape_string($conn, $_POST['customerFood']);  // CHANGE BASED ON YOUR WEBSITE
         
         $sql = "INSERT INTO customer_feedback (customer_name, customer_age, customer_food) 
-                VALUES ('$name', '$age', '$food')";
+                VALUES ('$name', '$age', '$food')"; // CHANGE BASED ON YOUR WEBSITE
         
         if ($conn->query($sql) === TRUE) {
             echo json_encode(array("status" => "success"));
